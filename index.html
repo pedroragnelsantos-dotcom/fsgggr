@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital Acessível</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Atalho de acessibilidade para navegação por teclado -->
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- CABEÇALHO E MENU DE NAVEGAÇÃO -->
+    <header class="cabecalho">
+        <div class="container">
+            <h1>Biblioteca Digital Acessível</h1>
+            <p class="apresentacao">Encontre materiais de leitura e estudo de maneira simples e organizada.</p>
+
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#livros">Livros</a></li>
+                    <li><a href="#categorias">Categorias</a></li>
+                    <li><a href="#sobre">Sobre o projeto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo-principal" class="container">
+
+        <!-- SEÇÃO INÍCIO -->
+        <section id="inicio" class="secao destaque-inicio">
+            <h2>Bem-vindo à leitura inclusiva</h2>
+            <p>Este espaço reúne livros e materiais educativos organizados por área do conhecimento, com textos objetivos, alto contraste visual e estrutura clara para facilitar seus estudos em qualquer dispositivo.</p>
+        </section>
+
+        <!-- SEÇÃO CATEGORIAS -->
+        <section id="categorias" class="secao">
+            <h2>Categorias</h2>
+            <p class="descricao-secao">Explore os materiais organizados por assunto:</p>
+
+            <ul class="grid-categorias">
+                <li class="card-categoria">
+                    <span class="icone-cat" aria-hidden="true">💻</span>
+                    <span class="nome-cat">Tecnologia</span>
+                </li>
+                <li class="card-categoria">
+                    <span class="icone-cat" aria-hidden="true">📖</span>
+                    <span class="nome-cat">Literatura</span>
+                </li>
+                <li class="card-categoria">
+                    <span class="icone-cat" aria-hidden="true">🔬</span>
+                    <span class="nome-cat">Ciências</span>
+                </li>
+                <li class="card-categoria">
+                    <span class="icone-cat" aria-hidden="true">📐</span>
+                    <span class="nome-cat">Matemática</span>
+                </li>
+                <li class="card-categoria">
+                    <span class="icone-cat" aria-hidden="true">🏛️</span>
+                    <span class="nome-cat">História</span>
+                </li>
+                <li class="card-categoria">
+                    <span class="icone-cat" aria-hidden="true">🌱</span>
+                    <span class="nome-cat">Desenvolvimento pessoal</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- SEÇÃO LIVROS (6 CARDS) -->
+        <section id="livros" class="secao">
+            <h2>Livros e Materiais de Estudo</h2>
+            <p class="descricao-secao">Confira os títulos disponíveis no acervo digital:</p>
+
+            <div class="grid-livros">
+
+                <!-- Livro 1 -->
+                <article class="card-livro">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='180' viewBox='0 0 300 180'><rect width='300' height='180' fill='%231e3a8a'/><text x='150' y='85' font-family='sans-serif' font-size='22' font-weight='bold' fill='%23ffffff' text-anchor='middle'>HTML e CSS na Prática</text><text x='150' y='115' font-family='sans-serif' font-size='14' fill='%23dbeafe' text-anchor='middle'>Capa Ilustrativa • Tecnologia</text></svg>" 
+                         alt="Capa azul escuro com o título HTML e CSS na Prática em letras brancas">
+                    <div class="card-conteudo">
+                        <span class="tag-categoria">Tecnologia</span>
+                        <h3>HTML e CSS na Prática</h3>
+                        <p class="autor"><strong>Autora:</strong> Marina Almeida</p>
+                        <p class="resumo">Guia introdutório sobre estruturação de páginas web e boas práticas de acessibilidade digital.</p>
+                        <a href="#sobre" class="btn-detalhes" aria-label="Ver detalhes do livro HTML e CSS na Prática">Ver detalhes</a>
+                    </div>
+                </article>
+
+                <!-- Livro 2 -->
+                <article class="card-livro">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='180' viewBox='0 0 300 180'><rect width='300' height='180' fill='%237c2d12'/><text x='150' y='85' font-family='sans-serif' font-size='22' font-weight='bold' fill='%23ffffff' text-anchor='middle'>Contos da Cidade Antiga</text><text x='150' y='115' font-family='sans-serif' font-size='14' fill='%23ffedd5' text-anchor='middle'>Capa Ilustrativa • Literatura</text></svg>" 
+                         alt="Capa marrom escuro com o título Contos da Cidade Antiga em letras brancas">
+                    <div class="card-conteudo">
+                        <span class="tag-categoria">Literatura</span>
+                        <h3>Contos da Cidade Antiga</h3>
+                        <p class="autor"><strong>Autor:</strong> Carlos Mendes</p>
+                        <p class="resumo">Coletânea de histórias curtas que retratam o cotidiano e a cultura de pequenas comunidades brasileiras.</p>
+                        <a href="#sobre" class="btn-detalhes" aria-label="Ver detalhes do livro Contos da Cidade Antiga">Ver detalhes</a>
+                    </div>
+                </article>
+
+                <!-- Livro 3 -->
+                <article class="card-livro">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='180' viewBox='0 0 300 180'><rect width='300' height='180' fill='%2314532d'/><text x='150' y='85' font-family='sans-serif' font-size='22' font-weight='bold' fill='%23ffffff' text-anchor='middle'>Biologia do Cotidiano</text><text x='150' y='115' font-family='sans-serif' font-size='14' fill='%23dcfce7' text-anchor='middle'>Capa Ilustrativa • Ciências</text></svg>" 
+                         alt="Capa verde escuro com o título Biologia do Cotidiano em letras brancas">
+                    <div class="card-conteudo">
+                        <span class="tag-categoria">Ciências</span>
+                        <h3>Biologia do Cotidiano</h3>
+                        <p class="autor"><strong>Autora:</strong> Dra. Helena Costa</p>
+                        <p class="resumo">Explicações claras sobre ecossistemas, corpo humano e sustentabilidade no dia a dia escolar.</p>
+                        <a href="#sobre" class="btn-detalhes" aria-label="Ver detalhes do livro Biologia do Cotidiano">Ver detalhes</a>
+                    </div>
+                </article>
+
+                <!-- Livro 4 -->
+                <article class="card-livro">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='180' viewBox='0 0 300 180'><rect width='300' height='180' fill='%23312e81'/><text x='150' y='85' font-family='sans-serif' font-size='22' font-weight='bold' fill='%23ffffff' text-anchor='middle'>Lógica e Números</text><text x='150' y='115' font-family='sans-serif' font-size='14' fill='%23e0e7ff' text-anchor='middle'>Capa Ilustrativa • Matemática</text></svg>" 
+                         alt="Capa azul índigo com o título Lógica e Números em letras brancas">
+                    <div class="card-conteudo">
+                        <span class="tag-categoria">Matemática</span>
+                        <h3>Lógica e Números</h3>
+                        <p class="autor"><strong>Autor:</strong> Prof. Ricardo Nogueira</p>
+                        <p class="resumo">Fundamentos de raciocínio lógico, porcentagens e resolução de problemas passo a passo.</p>
+                        <a href="#sobre" class="btn-detalhes" aria-label="Ver detalhes do livro Lógica e Números">Ver detalhes</a>
+                    </div>
+                </article>
+
+                <!-- Livro 5 -->
+                <article class="card-livro">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='180' viewBox='0 0 300 180'><rect width='300' height='180' fill='%23713f12'/><text x='150' y='85' font-family='sans-serif' font-size='22' font-weight='bold' fill='%23ffffff' text-anchor='middle'>História do Brasil Hoje</text><text x='150' y='115' font-family='sans-serif' font-size='14' fill='%23fef9c3' text-anchor='middle'>Capa Ilustrativa • História</text></svg>" 
+                         alt="Capa dourado escuro com o título História do Brasil Hoje em letras brancas">
+                    <div class="card-conteudo">
+                        <span class="tag-categoria">História</span>
+                        <h3>História do Brasil Hoje</h3>
+                        <p class="autor"><strong>Autora:</strong> Beatriz Vasconcelos</p>
+                        <p class="resumo">Panorama objetivo dos principais acontecimentos sociais, culturais e políticos do país.</p>
+                        <a href="#sobre" class="btn-detalhes" aria-label="Ver detalhes do livro História do Brasil Hoje">Ver detalhes</a>
+                    </div>
+                </article>
+
+                <!-- Livro 6 -->
+                <article class="card-livro">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='180' viewBox='0 0 300 180'><rect width='300' height='180' fill='%23134e4a'/><text x='150' y='85' font-family='sans-serif' font-size='22' font-weight='bold' fill='%23ffffff' text-anchor='middle'>Organização nos Estudos</text><text x='150' y='115' font-family='sans-serif' font-size='14' fill='%23ccfbf1' text-anchor='middle'>Capa Ilustrativa • Desenv. Pessoal</text></svg>" 
+                         alt="Capa verde-petróleo com o título Organização nos Estudos em letras brancas">
+                    <div class="card-conteudo">
+                        <span class="tag-categoria">Desenvolvimento pessoal</span>
+                        <h3>Organização nos Estudos</h3>
+                        <p class="autor"><strong>Autor:</strong> Lucas Ferreira</p>
+                        <p class="resumo">Técnicas simples de planejamento de rotina, foco e leitura ativa para estudantes.</p>
+                        <a href="#sobre" class="btn-detalhes" aria-label="Ver detalhes do livro Organização nos Estudos">Ver detalhes</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE O PROJETO -->
+        <section id="sobre" class="secao sobre-projeto">
+            <h2>Sobre o Projeto</h2>
+            <p>A <strong>Biblioteca Digital Acessível</strong> foi desenvolvida com foco em inclusão digital, clareza visual e facilidade de navegação.</p>
+            <p>O projeto aplica boas práticas de desenvolvimento front-end, como contraste adequado, hierarquia de títulos, textos alternativos em imagens e adaptação para computadores e dispositivos móveis.</p>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container">
+            <p><strong>Biblioteca Digital Acessível</strong> — Projeto Educativo de Front-End</p>
+            <p>Desenvolvido com HTML5 e CSS3 seguindo princípios de acessibilidade web.</p>
+        </div>
+    </footer>
+</body>
+</html>
