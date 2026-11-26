@@ -1,0 +1,273 @@
+/* Configurações Gerais e Variáveis de Alto Contraste */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-fundo: #f8fafc;
+    --cor-superficie: #ffffff;
+    --cor-primaria: #1e3a8a;
+    --cor-primaria-escura: #172554;
+    --cor-texto: #0f172a;
+    --cor-texto-suave: #334155;
+    --cor-borda: #cbd5e1;
+    --cor-foco: #2563eb;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Foco visível claro para navegação por teclado */
+:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 3px;
+}
+
+/* Link de salto para acessibilidade */
+.skip-link {
+    position: absolute;
+    top: -60px;
+    left: 16px;
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 16px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 1. CABEÇALHO E MENU */
+.cabecalho {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    padding: 2rem 0 1.5rem;
+    border-bottom: 4px solid #0f172a;
+}
+
+.cabecalho h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.apresentacao {
+    font-size: 1.1rem;
+    color: #e2e8f0;
+    margin-bottom: 1.5rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.menu a {
+    display: inline-block;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.6rem 1.1rem;
+    border-radius: 6px;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* SEÇÕES */
+.secao {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.secao h2 {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.descricao-secao {
+    color: var(--cor-texto-suave);
+    margin-bottom: 1.5rem;
+}
+
+.destaque-inicio {
+    border-left: 6px solid var(--cor-primaria);
+}
+
+/* 2. ÁREA DE CATEGORIAS (CSS Grid) */
+.grid-categorias {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card-categoria {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #f1f5f9;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.icone-cat {
+    font-size: 1.5rem;
+}
+
+/* 3. CARDS DE LIVROS (CSS Grid + Flexbox) */
+.grid-livros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.card-livro {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-livro img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.card-conteudo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.25rem;
+}
+
+.tag-categoria {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: #dbeafe;
+    color: var(--cor-primaria-escura);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.6rem;
+}
+
+.card-conteudo h3 {
+    font-size: 1.2rem;
+    color: var(--cor-texto);
+    margin-bottom: 0.4rem;
+}
+
+.autor {
+    font-size: 0.95rem;
+    color: var(--cor-texto-suave);
+    margin-bottom: 0.75rem;
+}
+
+.resumo {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    flex: 1;
+}
+
+/* 4. BOTÕES */
+.btn-detalhes {
+    display: inline-block;
+    text-align: center;
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+}
+
+.btn-detalhes:hover {
+    background-color: var(--cor-primaria-escura);
+}
+
+/* SOBRE O PROJETO */
+.sobre-projeto p + p {
+    margin-top: 0.75rem;
+}
+
+/* 5. RODAPÉ */
+.rodape {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.rodape p + p {
+    margin-top: 0.4rem;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+/* RESPONSIVIDADE PARA TABLETS E CELULARES */
+@media (max-width: 900px) {
+    .grid-livros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cabecalho h1 {
+        font-size: 1.6rem;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        display: block;
+        text-align: center;
+    }
+
+    .grid-livros,
+    .grid-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .secao {
+        padding: 1.25rem;
+    }
+}
